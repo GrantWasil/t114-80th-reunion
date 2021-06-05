@@ -1,4 +1,5 @@
 import { Container, Header, Button, Icon, Segment } from "semantic-ui-react";
+import EventbriteButton from "react-eventbrite-popup-checkout";
 
 export default function Heading() {
   return (
@@ -31,10 +32,12 @@ export default function Heading() {
             marginBottom: ".7em",
           }}
         />
-        <Button primary size="huge">
-          Reserve a Seat
-          <Icon name="right arrow" />
-        </Button>
+        <EventbriteButton ebEventId="157009771453" component="p">
+          <Button primary size="huge">
+            Buy Tickets
+            <Icon name="right arrow" />
+          </Button>
+        </EventbriteButton>
       </Container>
     </Segment>
   );

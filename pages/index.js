@@ -1,5 +1,6 @@
 import { createMedia } from "@artsy/fresnel";
 import CountUp from 'react-countup';
+import EventbriteButton from 'react-eventbrite-popup-checkout';
 
 // Import Own Components
 import Heading from "../components/heading";
