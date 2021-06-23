@@ -7,7 +7,7 @@ export default function Heading() {
     <Segment
       inverted
       textAlign="center"
-      style={{ minHeight: 500, padding: "1em 0em" }}
+      style={{ minHeight: 500, padding: "1em 0em", background: "#9A5937"}}
       vertical
     >
       <Container text>
@@ -24,7 +24,7 @@ export default function Heading() {
         />
         <Header
           as="h2"
-          content="Keep on Scouting."
+          content="Friday November 26, 2021"
           inverted
           style={{
             fontSize: "2.0em",

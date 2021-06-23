@@ -8,8 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@artsy/fresnel": "^1.6.0",
+    "@artsy/fresnel": "^1.7.0",
     "next": "10.x",
+    "next-images": "^1.8.1",
     "react": "17.x",
     "react-countup": "^4.3.3",
     "react-dom": "17.x",

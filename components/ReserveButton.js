@@ -8,7 +8,7 @@ const EventbriteButton = dynamic(
 export default function ReserveButton() {
   return (
     <EventbriteButton ebEventId="157009771453" component="div">
-      <Button primary size="huge">
+      <Button primary size="huge" style={{background: "#3C92E5"}}>
         Reserve a Seat
         <Icon name="right arrow" />
       </Button>

@@ -1,5 +1,8 @@
+// Import Next.JS Components
+
+// Import Third Party Components
 import { createMedia } from "@artsy/fresnel";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 // Import Own Components
 import Heading from "../components/heading";
@@ -14,7 +17,7 @@ import {
   Container,
   Divider,
   List,
-  Image,
+  Image
 } from "semantic-ui-react";
 
 // Defining media breakpoints
@@ -42,24 +45,15 @@ export default function Home() {
           <Grid.Row textAlign="center">
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                Current amount of Eagles
+                <CountUp start={0} end={219} duration={3} />
               </Header>
-              <p style={{ fontSize: "1.66em" }}>
-                <CountUp
-                  start={0}
-                  end={215}
-                  duration={3}
-                  />
-              </p>
+              <p style={{ fontSize: "1.66em" }}>Combined Girl and Boy Eagles</p>
             </Grid.Column>
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                "I shouldn't have gone with their competitor."
+                <CountUp start={0} end={54750} duration={3} separator=","/>
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
-                <Image avatar src="/images/avatar/large/nan.jpg" />
-                <b>Nan</b> Chief Fun Officer Acme Toys
-              </p>
+              <p style={{ fontSize: "1.66em" }}>Hours of Community Service</p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -85,11 +79,11 @@ export default function Home() {
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
-              <Image
+            <Image
                 bordered
                 rounded
-                size="large"
-                src="/images/wireframe/white-image.png"
+                size="xlarge"
+                src="patrol.jpg"
               />
             </Grid.Column>
           </Grid.Row>
@@ -140,7 +134,7 @@ export default function Home() {
         </Container>
       </Segment>
 
-      <Segment inverted vertical style={{ padding: "5em 0em" }}>
+      <Segment inverted vertical style={{ padding: "5em 0em", background: "#9A5937"}}>
         <Container>
           <Grid divided inverted stackable>
             <Grid.Row>
