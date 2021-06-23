@@ -7,6 +7,7 @@ import CountUp from "react-countup";
 // Import Own Components
 import Heading from "../components/heading";
 import ReserveButton from "../components/ReserveButton";
+import EmblaCarousel from "../components/EmblaCarousel";
 
 // Import Styled Components
 import "semantic-ui-css/semantic.min.css";
@@ -39,6 +40,8 @@ const ResponsiveContainer = ({ children }) => (
 );
 
 export default function Home() {
+  const SLIDE_COUNT = 5;
+  const slides = Array.from(Array(SLIDE_COUNT).keys());
   return (
     <ResponsiveContainer>
       <Segment style={{ padding: "0em" }} vertical>
@@ -122,6 +125,13 @@ export default function Home() {
             them to join us for this extraordinary event.
           </p>
         </Container>
+      </Segment>
+
+      <Segment style={{padding: "5em 0em", minheight: "50em"}} vertical textAlign="center">
+        <Header as="h3" style={{fontSize: "2em" }}>
+          See Our Scouts
+        </Header>
+      <EmblaCarousel slides={slides} />
       </Segment>
 
       <Segment

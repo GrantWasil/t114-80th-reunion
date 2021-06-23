@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@artsy/fresnel": "^1.7.0",
+    "embla-carousel": "^4.5.3",
     "next": "10.x",
     "next-images": "^1.8.1",
     "react": "17.x",
