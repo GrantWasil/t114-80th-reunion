@@ -6,6 +6,7 @@ import CountUp from "react-countup";
 
 // Import Own Components
 import Heading from "../components/heading";
+import ReserveButton from "../components/ReserveButton";
 
 // Import Styled Components
 import "semantic-ui-css/semantic.min.css";
@@ -14,8 +15,8 @@ import {
   Grid,
   Header,
   Button,
-  Container,
   Divider,
+  Container,
   List,
   Image,
 } from "semantic-ui-react";
@@ -51,9 +52,11 @@ export default function Home() {
             </Grid.Column>
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                <CountUp start={0} end={54750} duration={3} separator="," />
+                <CountUp start={0} end={54750} duration={5} separator="," />
               </Header>
-              <p style={{ fontSize: "1.66em" }}>Hours of Community Service</p>
+              <p style={{ fontSize: "1.66em" }}>
+                Combined Hours of Community Service
+              </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -63,19 +66,26 @@ export default function Home() {
           <Grid.Row>
             <Grid.Column width={8}>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                We Help Companies and Companions
+                Celebrating 80 Years of Service
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                We can give your company superpowers to do things that they
-                never thought possible. Let us delight your customers and
-                empower your needs... through pure data analytics.
+                Troop 114 in Littleton, CO celebrates 80 years of service to
+                Scouts and families this year. Founded by the Littleton United
+                Methodist Church (LUMC) in 1941, the Troop has served hundreds
+                of families and contributed 1,000’s of hours of service to the
+                community. The Troop’s 216 Boy and 3 Girl Eagle Scouts alone
+                have generated 54,750 hours of service valued at $1.5MM.
               </p>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                We Make Bananas That Can Dance
+                A Reuinion Worth Attending
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                Yes that's right, you thought it was the stuff of dreams, but
-                even bananas can be bioengineered.
+                We celebrate this milestone in the Troop’s history with a
+                reunion planned for Friday Nov. 26 at LUMC. Please plan to join
+                fellow alumni, both youth and adult. This reunion will also
+                celebrate 69 years of Cub Scouting in Pack 114, and for the
+                first time, 2 years of ScoutsBSA in Troop 114 Girls. The 80+69+2
+                combination is really something to shout about!
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
@@ -84,48 +94,33 @@ export default function Home() {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column textAlign="center">
-              <Button size="huge">Check Them Out</Button>
+              <ReserveButton />
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "8em 0em" }} vertical>
+      <Segment style={{ padding: "8em 0em" }} vertical textAlign="center">
         <Container text>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            Breaking The Grid, Grabs Your Attention
+            Get Updated
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            Instead of focusing on content creation and hard work, we have
-            learned how to master the art of doing nothing by providing massive
-            amounts of whitespace and generic content that can seem massive,
-            monolithic and worth your attention.
+            Please contact your extended family of Scouting friends and invite
+            them to join us for this extraordinary event.
           </p>
-          <Button as="a" size="large">
-            Read More
-          </Button>
+        </Container>
 
-          <Divider
-            as="h4"
-            className="header"
-            horizontal
-            style={{ margin: "3em 0em", textTransform: "uppercase" }}
-          >
-            <a href="#">Case Studies</a>
-          </Divider>
+        <Divider section hidden />
 
+        <Container text>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            Did We Tell You About Our Bananas?
+            Calling All Friends of Scouting
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            Yes I know you probably disregarded the earlier boasts as
-            non-sequitur filler content, but it's really true. It took years of
-            gene splicing and combinatory DNA research, but our bananas can
-            really dance.
+            Please contact your extended family of Scouting friends and invite
+            them to join us for this extraordinary event.
           </p>
-          <Button as="a" size="large">
-            I'm Still Quite Interested
-          </Button>
         </Container>
       </Segment>
 
