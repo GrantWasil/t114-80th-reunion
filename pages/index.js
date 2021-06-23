@@ -3,6 +3,7 @@
 // Import Third Party Components
 import { createMedia } from "@artsy/fresnel";
 import CountUp from "react-countup";
+import { FacebookShareButton, FacebookIcon } from "next-share";
 
 // Import Own Components
 import Heading from "../components/heading";
@@ -72,23 +73,19 @@ export default function Home() {
                 Celebrating 80 Years of Service
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                Troop 114 in Littleton, CO celebrates 80 years of service to
-                Scouts and families this year. Founded by the Littleton United
-                Methodist Church (LUMC) in 1941, the Troop has served hundreds
-                of families and contributed 1,000’s of hours of service to the
-                community. The Troop’s 216 Boy and 3 Girl Eagle Scouts alone
-                have generated 54,750 hours of service valued at $1.5MM.
+                Founded by the Littleton United Methodist Church (LUMC) in 1941,
+                the Troop has served hundreds of families and contributed
+                1,000’s of hours of service to the community.
               </p>
               <Header as="h3" style={{ fontSize: "2em" }}>
                 A Reuinion Worth Attending
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                We celebrate this milestone in the Troop’s history with a
-                reunion planned for Friday Nov. 26 at LUMC. Please plan to join
-                fellow alumni, both youth and adult. This reunion will also
-                celebrate 69 years of Cub Scouting in Pack 114, and for the
-                first time, 2 years of ScoutsBSA in Troop 114 Girls. The 80+69+2
-                combination is really something to shout about!
+                Please plan to join fellow alumni, both youth and adult. This
+                reunion will also celebrate 69 years of Cub Scouting in Pack
+                114, and for the first time, 2 years of ScoutsBSA in Troop 114
+                Girls. The 80+69+2 combination is really something to shout
+                about!
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
@@ -106,7 +103,7 @@ export default function Home() {
       <Segment style={{ padding: "8em 0em" }} vertical textAlign="center">
         <Container text>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            Get Updated
+            Stay Updated
           </Header>
           <p style={{ fontSize: "1.33em" }}>
             Please contact your extended family of Scouting friends and invite
@@ -122,16 +119,27 @@ export default function Home() {
           </Header>
           <p style={{ fontSize: "1.33em" }}>
             Please contact your extended family of Scouting friends and invite
-            them to join us for this extraordinary event.
+            them to join us for this extraordinary event. You can use the button
+            below to easily share this event on Facebook.
           </p>
+          <FacebookShareButton
+            url={"https://www.troop114reunion.com"}
+            quote={"Calling all Troop 114 Alumni"}
+          >
+            <FacebookIcon size={40} round />
+          </FacebookShareButton>
         </Container>
       </Segment>
 
-      <Segment style={{padding: "5em 0em", minheight: "50em"}} vertical textAlign="center">
-        <Header as="h3" style={{fontSize: "2em" }}>
+      <Segment
+        style={{ padding: "5em 0em", minheight: "50em" }}
+        vertical
+        textAlign="center"
+      >
+        <Header as="h3" style={{ fontSize: "2em" }}>
           See Our Scouts
         </Header>
-      <EmblaCarousel slides={slides} />
+        <EmblaCarousel slides={slides} />
       </Segment>
 
       <Segment
