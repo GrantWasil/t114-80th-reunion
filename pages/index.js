@@ -17,7 +17,7 @@ import {
   Container,
   Divider,
   List,
-  Image
+  Image,
 } from "semantic-ui-react";
 
 // Defining media breakpoints
@@ -51,7 +51,7 @@ export default function Home() {
             </Grid.Column>
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                <CountUp start={0} end={54750} duration={3} separator=","/>
+                <CountUp start={0} end={54750} duration={3} separator="," />
               </Header>
               <p style={{ fontSize: "1.66em" }}>Hours of Community Service</p>
             </Grid.Column>
@@ -79,12 +79,7 @@ export default function Home() {
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
-            <Image
-                bordered
-                rounded
-                size="xlarge"
-                src="patrol.jpg"
-              />
+              <Image bordered rounded size="xlarge" src="patrol.jpg" />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -134,36 +129,49 @@ export default function Home() {
         </Container>
       </Segment>
 
-      <Segment inverted vertical style={{ padding: "5em 0em", background: "#9A5937"}}>
+      <Segment
+        inverted
+        vertical
+        style={{ padding: "4em 0em", background: "#9A5937" }}
+      >
         <Container>
-          <Grid divided inverted stackable>
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <Header inverted as="h4" content="About" />
+          <Grid divided inverted stackable columns="equal">
+            <Grid.Row textAlign="center">
+              <Grid.Column>
+                <Header inverted as="h4" content="Troop 114 Boys" />
                 <List link inverted>
-                  <List.Item as="a">Sitemap</List.Item>
-                  <List.Item as="a">Contact Us</List.Item>
-                  <List.Item as="a">Religious Ceremonies</List.Item>
-                  <List.Item as="a">Gazebo Plans</List.Item>
+                  <List.Item
+                    as="a"
+                    href="https://www.troop-114.org"
+                    target="_blank"
+                  >
+                    Main Website
+                  </List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={3}>
-                <Header inverted as="h4" content="Services" />
+              <Grid.Column>
+                <Header inverted as="h4" content="Troop 114 Girls" />
                 <List link inverted>
-                  <List.Item as="a">Banana Pre-Order</List.Item>
-                  <List.Item as="a">DNA FAQ</List.Item>
-                  <List.Item as="a">How To Access</List.Item>
-                  <List.Item as="a">Favorite X-Men</List.Item>
+                  <List.Item
+                    as="a"
+                    href="https://www.trooponefourteengirls.com/"
+                    target="_blank"
+                  >
+                    Main Website
+                  </List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={7}>
-                <Header as="h4" inverted>
-                  Footer Header
-                </Header>
-                <p>
-                  Extra space for a call to action inside the footer that could
-                  help re-engage users.
-                </p>
+              <Grid.Column>
+                <Header as="h4" inverted content="Cub Scout Pack 114" />
+                <List link inverted>
+                  <List.Item
+                    as="a"
+                    href="http://www.pack114.scoutlander.com/publicsite/unithome.aspx?UID=1264"
+                    target="_blank"
+                  >
+                    Main Website
+                  </List.Item>
+                </List>
               </Grid.Column>
             </Grid.Row>
           </Grid>
