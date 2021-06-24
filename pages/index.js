@@ -151,9 +151,9 @@ export default function Home() {
           <FacebookShareButton 
             url={"https://www.troop114reunion.com"}
             quote={"Calling all Troop 114 Alumni"}
-            style={{paddingTop: "2em"}}
+            style={{paddingTop: "3em"}}
           >
-            <FacebookIcon size={50} round />
+            <FacebookIcon size={70} round />
           </FacebookShareButton>
         </Container>
       </Segment>
