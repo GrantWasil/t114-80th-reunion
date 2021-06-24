@@ -133,7 +133,7 @@ export default function Home() {
               <label>Email</label>
               <input id="email" name="email" placeholder="Email" required type="email"/>
             </Form.Field>
-            <Button type="submit" primary>Sign Up</Button>
+            <Button type="submit" primary style={{ marginTop:"1em"}}>Sign Up</Button>
           </Form>
         </Container>
 
