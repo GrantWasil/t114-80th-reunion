@@ -1,13 +1,15 @@
 import { Container, Header, Segment } from "semantic-ui-react";
 
 import ReserveButton from './ReserveButton';
+import background from '../public/flowers.webp'
+import { auto } from "@popperjs/core";
 
 export default function Heading() {
   return (
     <Segment
       inverted
       textAlign="center"
-      style={{ minHeight: 500, padding: "1em 0em", background: "#9A5937"}}
+      style={{ minHeight: 500, padding: "1em 0em", backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "50% 10%"}}
       vertical
     >
       <Container text>

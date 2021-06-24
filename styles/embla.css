@@ -37,7 +37,7 @@
   
   .embla__slide__inner {
     position: relative;
-    height: 25em;
+    height: 30em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,3 +100,11 @@
     right: 27px;
   }
   
+@media (max-width: 400px) {
+  .embla {
+    max-width: 95%;
+  }
+  .embla__slide__inner {
+    height: 20em;
+  } 
+}

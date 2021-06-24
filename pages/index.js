@@ -16,11 +16,12 @@ import {
   Segment,
   Grid,
   Header,
-  Button,
   Divider,
   Container,
   List,
   Image,
+  Form,
+  Button
 } from "semantic-ui-react";
 
 // Defining media breakpoints
@@ -43,6 +44,21 @@ const ResponsiveContainer = ({ children }) => (
 export default function Home() {
   const SLIDE_COUNT = 5;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
+
+  const recordInfo = async event => {
+    event.preventDefault()
+    const data = [event.target.name.value, event.target.email.value]
+    const res = await fetch(
+      'https://v1.nocodeapi.com/grantwasil/google_sheets/OjcsaXSqMFtlbqck?tabId=Sheet1&api_key=amLulfpkNyUDPMcdc',
+      {
+        body: JSON.stringify([data]),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      }
+    )
+  }
   return (
     <ResponsiveContainer>
       <Segment style={{ padding: "0em" }} vertical>
@@ -100,15 +116,25 @@ export default function Home() {
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "8em 0em" }} vertical textAlign="center">
+      <Segment style={{ padding: "6em 0em" }} vertical textAlign="center">
         <Container text>
           <Header as="h3" style={{ fontSize: "2em" }}>
             Stay Updated
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            Please contact your extended family of Scouting friends and invite
-            them to join us for this extraordinary event.
+            Please enter your email address below to recieve updates on the event
           </p>
+          <Form onSubmit={recordInfo}>
+            <Form.Field>
+              <label>Name</label>
+              <input id="name" name="name" placeholder="Name" required/>
+            </Form.Field>
+            <Form.Field>
+              <label>Email</label>
+              <input id="email" name="email" placeholder="Email" required type="email"/>
+            </Form.Field>
+            <Button type="submit" primary>Sign Up</Button>
+          </Form>
         </Container>
 
         <Divider section hidden />
@@ -122,11 +148,12 @@ export default function Home() {
             them to join us for this extraordinary event. You can use the button
             below to easily share this event on Facebook.
           </p>
-          <FacebookShareButton
+          <FacebookShareButton 
             url={"https://www.troop114reunion.com"}
             quote={"Calling all Troop 114 Alumni"}
+            style={{paddingTop: "2em"}}
           >
-            <FacebookIcon size={40} round />
+            <FacebookIcon size={50} round />
           </FacebookShareButton>
         </Container>
       </Segment>
