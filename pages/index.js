@@ -1,5 +1,6 @@
 // Import Next.JS Components
 import Head from "next/head";
+import React, { useState } from 'react';
 
 // Import Third Party Components
 import { createMedia } from "@artsy/fresnel";
@@ -10,6 +11,7 @@ import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon } 
 import Heading from "../components/heading";
 import ReserveButton from "../components/ReserveButton";
 import EmblaCarousel from "../components/EmblaCarousel";
+import UpdateForm from "../components/UpdatesForm";
 
 // Import Styled Components
 import "semantic-ui-css/semantic.min.css";
@@ -21,7 +23,6 @@ import {
   Container,
   List,
   Image,
-  Form,
   Button,
 } from "semantic-ui-react";
 
@@ -45,10 +46,16 @@ const ResponsiveContainer = ({ children }) => (
 export default function Home() {
   const SLIDE_COUNT = 11;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
+  const [isFormShown, setIsFormShown] = useState(false);
 
-  const recordInfo = async (event) => {
-    event.preventDefault();
-    const data = [event.target.name.value, event.target.email.value];
+  const handleFormChange = () => {
+    setIsFormShown(!isFormShown);
+  }
+
+  const recordInfo = async (formData) => {
+    console.log(formData);
+    const { name, email, cell, address, years, rank } = formData;
+    const data = [name, email, cell, address, years, rank];
     const res = await fetch(
       "https://v1.nocodeapi.com/grantwasil/google_sheets/OjcsaXSqMFtlbqck?tabId=Sheet1&api_key=amLulfpkNyUDPMcdc",
       {
@@ -113,7 +120,7 @@ export default function Home() {
                 </p>
               </Grid.Column>
               <Grid.Column floated="right" width={6}>
-                <Image bordered rounded size="xlarge" src="patrol.jpg" />
+                <Image bordered rounded size="huge" src="patrol.jpg" />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
@@ -130,29 +137,15 @@ export default function Home() {
               Stay Updated
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              Please enter your email address below to recieve updates on the
-              event
+              Please click the button below to recieve updates on the event.
             </p>
-            <Form onSubmit={recordInfo}>
-              <Form.Field>
-                <label>Name</label>
-                <input id="name" name="name" placeholder="Name" required />
-              </Form.Field>
-              <Form.Field>
-                <label>Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                  type="email"
-                />
-              </Form.Field>
-              <Button type="submit" primary style={{ marginTop: "1em" }}>
-                Sign Up
-              </Button>
-            </Form>
+            <Button size="big" primary onClick={handleFormChange}>Stay Updated</Button>
           </Container>
+          <UpdateForm 
+            isOpen={isFormShown} 
+            onSubmit={recordInfo} 
+            onClose={handleFormChange} 
+            />
 
           <Divider section hidden />
 
