@@ -43,7 +43,7 @@ const ResponsiveContainer = ({ children }) => (
 );
 
 export default function Home() {
-  const SLIDE_COUNT = 5;
+  const SLIDE_COUNT = 11;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
 
   const recordInfo = async (event) => {
