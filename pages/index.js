@@ -4,7 +4,7 @@ import Head from "next/head";
 // Import Third Party Components
 import { createMedia } from "@artsy/fresnel";
 import CountUp from "react-countup";
-import { FacebookShareButton, FacebookIcon } from "next-share";
+import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon } from "next-share";
 
 // Import Own Components
 import Heading from "../components/heading";
@@ -64,6 +64,7 @@ export default function Home() {
     <>
     <Head>
       <title>Troop 114's 80th Reunion</title>
+      <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
       <ResponsiveContainer>
         <Segment style={{ padding: "0em" }} vertical>
@@ -101,7 +102,7 @@ export default function Home() {
                   contributed 1,000’s of hours of service to the community.
                 </p>
                 <Header as="h3" style={{ fontSize: "2em" }}>
-                  A Reuinion Worth Attending
+                  A Reunion Worth Attending
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
                   Please plan to join fellow alumni, both youth and adult. This
@@ -171,6 +172,14 @@ export default function Home() {
             >
               <FacebookIcon size={70} round />
             </FacebookShareButton>
+
+            <LinkedinShareButton
+              url={"https://www.linkedin.com/groups/12540755/"}
+              quote={"Calling all Troop 114 Alumni"}
+              style={{ paddingTop: "3em", paddingLeft:"1em"}}
+            >
+              <LinkedinIcon size={70} round />
+            </LinkedinShareButton>
           </Container>
         </Segment>
 
